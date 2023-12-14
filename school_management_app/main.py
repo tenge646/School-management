@@ -2,7 +2,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from models import Student, Teacher, Subject, Class
 
-# sql engine and session
+# Create the SQLAlchemy engine and session
 engine = create_engine('sqlite:///database.sqlite')
 Session = sessionmaker(bind=engine)
 session = Session()
@@ -44,13 +44,13 @@ def display_classes_and_teachers():
             print("- ", teacher.name)
         print()
 
-       # Main program
+# Main program loop
 while True:
     print("Select an option:")
-    print("1.Students")
-    print("2.Teachers")
-    print("3.Subjects ")
-    print("4.classes ")
+    print("1. Display all students")
+    print("2. Display all teachers")
+    print("3. Display subjects and teachers")
+    print("4. Display classes and teachers")
     print("5. Quit")
     user_input = input("Enter your choice: ")
 
@@ -67,4 +67,3 @@ while True:
 
 # Close the session when done
 session.close()
- 

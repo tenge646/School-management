@@ -1,8 +1,8 @@
 """students table
 
-Revision ID: 3aac0f89c1bd
-Revises: 67034857b705
-Create Date: 2023-12-14 15:07:13.108565
+Revision ID: 490aa5f84c1f
+Revises: faa68600fb03
+Create Date: 2023-12-13 22:16:24.142463
 
 """
 from typing import Sequence, Union
@@ -12,8 +12,8 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision: str = '3aac0f89c1bd'
-down_revision: Union[str, None] = '67034857b705'
+revision: str = '490aa5f84c1f'
+down_revision: Union[str, None] = 'faa68600fb03'
 branch_labels: Union[str, Sequence[str], None] = None
 depends_on: Union[str, Sequence[str], None] = None
 
@@ -30,4 +30,3 @@ def upgrade() -> None:
 
 def downgrade() -> None:
     op.drop_table('students')
-
