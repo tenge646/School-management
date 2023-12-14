@@ -43,3 +43,28 @@ def display_classes_and_teachers():
         for teacher in teachers:
             print("- ", teacher.name)
         print()
+
+       # Main program
+while True:
+    print("Select an option:")
+    print("1.Students")
+    print("2.Teachers")
+    print("3.Subjects ")
+    print("4.classes ")
+    print("5. Quit")
+    user_input = input("Enter your choice: ")
+
+    if user_input == "1":
+        display_students()
+    elif user_input == "2":
+        display_teachers()
+    elif user_input == "3":
+        display_subjects_and_teachers()
+    elif user_input == "4":
+        display_classes_and_teachers()
+    elif user_input == "5":
+        break
+
+# Close the session when done
+session.close()
+ 
